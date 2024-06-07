@@ -1,0 +1,25 @@
+name:   "Test the Dependency Check"
+
+on:
+  push:
+    branches:
+    - TestDependencyCheck
+    
+  pull_request:
+    types: [opened, labeled]
+    branches:
+      - main
+      - TestDependencyCheck
+
+  workflow_dispatch:
+  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        
+        
+      - name: Run Script
+        run: node .script/utils-javascript/featureDependency.js      
