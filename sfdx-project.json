@@ -1,0 +1,20 @@
+{
+    "packageDirectories": [
+      {
+        "path": "path1",
+        "package": "package1",
+        "versionNumber": "1.0.2.NEXT"
+      },
+      {
+        "path": "path2",
+        "package": "package2",
+        "versionNumber": "1.0.0.NEXT",
+        "dependencies": [
+          {
+            "package": "package1",
+            "versionNumber": "1.0.0.LATEST"
+          }
+        ]
+      }
+    ]
+  }
